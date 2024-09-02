@@ -13,7 +13,10 @@ public class _1978 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 44d9f0de68f65a051f022848f291ee56059aa003
 		try {
 			String firstLine = br.readLine();
 			int N = Integer.parseInt(firstLine);
