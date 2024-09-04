@@ -1,0 +1,35 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Main {
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		try {
+			
+			int c = Integer.parseInt(br.readLine());
+			int[] avgArr = new int[c];
+			
+			int avg = 0;
+			for(int i = 0; i < c; i++) {
+				
+				int j = Integer.parseInt(br.readLine());
+				int[] tempArr = new int[j];
+				for(int k = j; k > 0; k--) {
+					tempArr[k] = Integer.parseInt(br.readLine());
+					avg += tempArr[k];
+				}
+				avg = avg / j;
+				if(tempArr)
+			}
+			
+			bw.flush();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+ 	}
+}
