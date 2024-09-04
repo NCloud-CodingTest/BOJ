@@ -9,18 +9,34 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		try {
-			int n = Integer.parseInt(br.readLine());
 			
-			for(int i = 0; i < n; i++) {
+			int c = Integer.parseInt(br.readLine());
+			double[] avgArr = new double[c];
+			
+			for(int i = 0; i < c; i++) {
+				String[] input = br.readLine().split(" ");
+				int j = Integer.parseInt(input[0]);
+				int[] tempArr = new int[j];
+				double avg = 0;
+				double cnt = 0;
 				
-				for(int j = 0; j < i ; j++) {
-					bw.write(" ");
+				for(int k = 0; k < j; k++) {	
+					tempArr[k] = Integer.parseInt(input[k + 1]);
+					avg += tempArr[k];
 				}
-				for(int j = n; j > i; j--) {
-					bw.write("*");
+				avg /= j;
+				
+				for(int k = 0; k < j; k++) {
+					if(tempArr[k] > avg) {
+						cnt++;
+					}		
 				}
-
-				bw.newLine();
+				double d = (cnt / j) * 100;
+				avgArr[i] = d;
+			}
+			
+			for(double d : avgArr) {
+				bw.write(String.format("%.3f%%\n", d));
 			}
 			
 			bw.flush();
