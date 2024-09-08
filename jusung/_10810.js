@@ -14,26 +14,17 @@ btn.addEventListener("click", () => {
     for (let i = 0; i < changetNumCnt; i++) {
         let changeStartNum = prompt("공을 바꿀 위치의 시작 번호를 입력해주세요.");
         let changeEndNum = prompt("공을 바꿀 위치의 마지막 번호를 입력해주세요.");
-
         let removeNum = changeEndNum - changeStartNum;
-
         let changeNum = prompt("공을 바꿀 번호를 입력해주세요.");
 
-        let addNum = Array(removeNum + 1).fill(changeNum);
+        let addNum;
+        (addNum = []).length = removeNum + 1;
+        addNum.fill(changeNum);
 
-        if (arr[i] === undefined && arr[i] === null) {
-            let add = Array(removeNum + 1).fill(changeNum);
-            arr.push(...add);
-        } else {
-            arr.splice(changeStartNum, removeNum, ...addNum);
-        }
+        arr.splice(changeStartNum - 1, removeNum + 1, ...addNum);
     }
 
     console.log(arr);
-
-    // for(let i = 0; i < arr.length; i++) {
-    //     let input = prompt("")
-    // }
 });
 
 /** prompt 함수: 팝업창을 띄어 사용자 입력값을 받을 수 있는 함수이다.
