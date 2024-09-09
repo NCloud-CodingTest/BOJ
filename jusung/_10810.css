@@ -1,0 +1,15 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button {
+    width: 10rem;
+    height: 3rem;
+    background-color: rgb(82, 82, 82);
+    color: black;
+    border: 2px solid black;
+}

@@ -24,6 +24,7 @@ btn.addEventListener("click", () => {
         arr.splice(changeStartNum - 1, removeNum + 1, ...addNum);
     }
 
+    alert(arr);
     console.log(arr);
 });
 
