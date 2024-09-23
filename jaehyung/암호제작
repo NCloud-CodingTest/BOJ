@@ -1,0 +1,19 @@
+const input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
+const [P, K] = input[0].split(" ").map(el => BigInt(el));
+let i = BigInt(1);
+let answer = '';
+
+while(true) {
+  if(i >= K) {
+    answer = 'GOOD';
+    break;
+  }
+    
+  i++;
+    
+  if(P % i === 0 && i < K) {
+    answer = 'BAD ' + i;
+    break;
+  }
+}
+console.log(answer);
