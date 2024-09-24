@@ -7,7 +7,7 @@ btn.addEventListener("click", () => {
     let arr;
     (arr = []).length = bucketCnt;
     arr.fill(0);
-    console.log(arr);
+    // console.log(arr);
 
     let changetNumCnt = prompt("공을 넣을 횟수를 입력하세요.");
 
@@ -25,7 +25,7 @@ btn.addEventListener("click", () => {
     }
 
     alert(arr);
-    console.log(arr);
+    console.log(arr.join('/n'));
 });
 
 /** prompt 함수: 팝업창을 띄어 사용자 입력값을 받을 수 있는 함수이다.
