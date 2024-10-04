@@ -1,0 +1,37 @@
+package chap00_practice;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		int[] Narr = new int[T];
+		List<Integer> aList = new ArrayList<Integer>();
+		aList.add(0, 1);
+		aList.add(1, 1);
+		aList.add(2, 1);
+		aList.add(3, 2);
+		aList.add(4, 2);
+		int[] result = new int[T];
+		
+		for(int i = 0; i < Narr.length; i++) {
+			Narr[i] = sc.nextInt();
+		}
+		
+		for(int i = 5; i < Narr[Narr.length - 1]; i++) {
+			aList.add(i, (i-1) * (i-5));
+		}
+		
+		for(int i = 0; i < T; i++) {
+			result[i] = aList.indexOf(Narr[i]);
+		}
+		
+		for(int i : result) {
+			System.out.println(i);
+		}
+		
+ 	}
+}
