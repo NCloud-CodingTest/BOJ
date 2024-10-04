@@ -16,17 +16,23 @@ public class Main {
 		aList.add(3, 2);
 		aList.add(4, 2);
 		int[] result = new int[T];
+		int max = 0;
 		
 		for(int i = 0; i < Narr.length; i++) {
 			Narr[i] = sc.nextInt();
 		}
-		
-		for(int i = 5; i < Narr[Narr.length - 1]; i++) {
-			aList.add(i, (i-1) * (i-5));
+		for(int i = 0; i < Narr.length; i++) {
+			if(Narr[i] > max) {
+				max = Narr[i];
+			}
+		}
+		for(int i = 5; i <= max; i++) {
+			aList.add(i, (i) + (i-5));
+			System.out.println(aList);
 		}
 		
 		for(int i = 0; i < T; i++) {
-			result[i] = aList.indexOf(Narr[i]);
+			result[i] = aList.get(Narr[i]);
 		}
 		
 		for(int i : result) {
